@@ -544,8 +544,38 @@ input[type="date"] {
 
 .flip-container {
     perspective: 750px;
-    height: 200px;
+    min-height: 200px;
+    margin-bottom: 8px; 
 }
+
+@media only screen and (min-width: 740px) {
+
+.flip_block1 {
+    height: 290px;
+      
+}
+
+.flip_block4 {
+    height: 250px;
+}
+}
+
+@media only screen and (max-width: 400px) {
+.flip_block1 {
+    height: 320px;
+}
+.flip_block2 {
+    height: 220px;
+}
+.flip_block3 {
+    height: 220px;
+}
+.flip_block4 {
+    height: 300px;
+}
+}
+
+
 
 .flipper {
     transition: 1s;
@@ -567,7 +597,7 @@ input[type="date"] {
     font-family: 'Exo 2', sans-serif;
     color: rgb(60, 60, 60);
     font-size: 16px;
-    padding: 16px 16px 0px 16px;
+    padding: 8px 8px 0px 8px;
 }
 
 .back {
@@ -576,7 +606,7 @@ input[type="date"] {
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    background: rgba(173, 255, 0, 1);
+    background: rgba(117, 23, 197, 0.8);
 }
 
 .front {
