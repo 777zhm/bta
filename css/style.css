@@ -543,13 +543,8 @@ input[type="date"] {
 /* Start flipper */
 
 .flip-container {
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-    width: 82%;
-    height: 72px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 0 0.3rem rgba(255, 2, 222, 0.25);
+    perspective: 750px;
+    height: 200px;
 }
 
 .flipper {
@@ -557,27 +552,22 @@ input[type="date"] {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     position: relative;
-
 }
 
 .front,
 .back {
     width: 100%;
-    height: 72px;
+    height: 100%;
     position: absolute;
     left: 0;
     top: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-	
-    color: rgb(60, 60, 60);
-    font-weight: bold;
-    font-style: italic;
-    font-size: 1.5em;
-    text-align: center;
-    font-family: serif;
     border-radius: 5px;
-
+    font-family: 'Exo 2', sans-serif;
+    color: rgb(60, 60, 60);
+    font-size: 16px;
+    padding: 16px 16px 0px 16px;
 }
 
 .back {
@@ -595,7 +585,6 @@ input[type="date"] {
 
 .flip-container:hover .flipper,
 .flip-container.hover .flipper {
-
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -ms-transform: rotateY(-180deg);
