@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122661130-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    ga('require', 'displayfeatures');
+    gtag('config', 'UA-122661130-1');
+    </script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Заказ авиабылетов, ждбилеты, бизнес туризм">
+    <meta name="keywords" content="билет, авиабилет, ждбилет, авиаперевозки, купить билет, билет поезд, бизнес тревел, business travel, бизнес туризм, business tourism">
+    <meta name="author" content="Kordun Yuriy">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Business Travel Agency</title>
+    <!--font-awesome free CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        <div>
+            <a class="navbar-brand" href="#"><img src="../img/logotype.png" height="60" alt="BTA logo"></a>
+        </div>
+         <!-- <div class="d-none d-md-block d-lg-block"> -->  <!-- отображение только на больших и средних экранах -->
+        <div class="header_telephone">
+            <a href="tel:044-228-8186">(044)228-81-86</a>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <menu class="menu cf">
+                <li><a href="#">Main</a></li>
+                <li><a href="#features">Services</a></li>
+                <li><a href="#aboutus">Company</a>
+                    <ul class="submenu">
+                        <li><a href="#aboutus">About us</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <!-- <li><a href="#partners">Partners</a></li> -->
+                        <li><a href="../doc/bta_dogovor.pdf" target="_b">Contract</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contacts">Contacts</a></li>
+            </menu>
+        </div>
+        <div class="language_box">
+            <a class="btn language_button" href="../index.html">RU</a>
+            <a class="btn language_button active" href="#">EN</a>
+        </div>
+        <div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <section id="undermenuplace">
+    </section>
+    <section id="order">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-11 col-sm-12">
+                    <h1 class="text-center">Order a ticket</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-5 col-sm-8 col-9">
+                    <form id="formorder" action="/en/send_order.php" method="post" class="needs-validation" novalidate>
+                        <div class="form-row justify-content-between">
+                            <div class="form-group col-sm-6">
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Name" pattern="^[a-zA-Zа-яґєіїёА-ЯЄІЇЁ\s()-]{3,35}" required>
+                                <div class="invalid-feedback">
+                                    Enter your name. Digits are forbidden.
+                                </div>
+                                <!-- Украинские,русские,английские большие и маленькие буквы, символ пробела, скобки, дефис, всего от 3-х до 35 символов. Апостроф и цифры запрещены. -->
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="tel" class="form-control" id="usertelephone" name="usertelephone" placeholder="Phone" pattern="^[0-9-+()\s]{10,20}" required>
+                                <div class="invalid-feedback">
+                                    Phone from 10 to 20 digits. Letters are forbidden.
+                                </div>
+                                <!-- цифры,символ пюс, дефис,скобки, пробел, всего от 10-х до 20 символов. Буквы и другие символы запрещены. 
+                                        Пример граничной валидности:+ (380) 63-767-88-99 (всего 20 символов) -->
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-sm-6">
+                                <input type="text" class="form-control" id="userfromplace" name="userfromplace" placeholder="Departure" pattern="^[a-zA-Zа-яґєіїёА-ЯЄІЇЁ\s()-]{3,35}" required>
+                                <div class="invalid-feedback">
+                                    Enter the city of departure. Digits are forbidden.
+                                </div>
+                                <!-- Украинские,русские,английские большие и маленькие буквы, символ пробела, скобки, дефис, всего от 3-х до 35 символов. Апостроф и цифры запрещены. -->
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="text" class="form-control" id="usertoplace" name="usertoplace" placeholder="Arrival" pattern="^[a-zA-Zа-яґєіїёА-ЯЄІЇЁ\s()-]{3,35}" required>
+                                <div class="invalid-feedback">
+                                    Enter the city of arrival. Digits are forbidden.
+                                </div>
+                                <!-- Украинские,русские,английские большие и маленькие буквы, символ пробела, скобки, дефис, всего от 3-х до 35 символов. Апостроф и цифры запрещены. -->
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-sm-6">
+                                <label for="departuredate">Departure</label>
+                                <input type="date" class="form-control" id="departuredate" name="departuredate" min="2018-07-01">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="returndate">Return</label>
+                                <input type="date" class="form-control" id="returndate" name="returndate" min="2018-07-01">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="ticketsquantity">Tickets</label>
+                                <input type="number" class="form-control" id="ticketsquantity" name="ticketsquantity" min="1" max="99">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="discountcode">Discount</label>
+                                <input type="text" class="form-control" id="discountcode" name="discountcode" placeholder="PIN">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="transportRadios">Transport</label>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn avia_button">
+                                        <input class="form-check-input" type="radio" name="transportRadios" id="transportRadios1" value="Авиа" checked>
+                                        <i class="fa fa-plane"></i> Airplane
+                                    </label>
+                                    <label class="btn train_button">
+                                        <input class="form-check-input" type="radio" name="transportRadios" id="transportRadios2" value="ЖД">
+                                        <i class="fa fa-train"></i> Train
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-sm-6">
+                                <input type="email" class="form-control" id="useremail" name="useremail" placeholder="E-mail">
+                            </div>
+                            <div class="form-group col-sm-6">
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-lg bta_button order_button">Make Order</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="destination" id="features"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center">Services</h2></div>
+            </div>
+            <div class="row justify-content-center text-justify">
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <h3 class="text-center"><i class="fas fa-plane"></i> Flights</h3>
+                    <p>We provide information on flight schedules, places, tickets. We will choose the best variant of the flight according to your wishes for the date and time of departure and return. We will create group transportation for participants of conferences and other business events. Round-the-clock communication with the personal manager 24/7. We do not have additional commissions for a group application.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <h3 class="text-center"> <i class="fas fa-train"></i> Trains</h3>
+                    <p>We will pick up tickets according to your wishes the date of departure and return. A personal manager who will be able to advise on all matters regarding railway transportation. We do not have additional commissions for a group application.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <h3 class="text-center"><i class="fas fa-hotel"></i> Hotel reservation</h3>
+                    <p>Thanks to contractual relations with Ukrainian and foreign hotels, the cost of booking through us is in most cases lower than if you ordered directly. We have a full list of Ukrainian hotels from 5 stars to a budget option of 3 stars.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <h3 class="text-center"><i class="fas fa-car"></i> Transfer</h3>
+                    <p>We take a responsible attitude to the fact that the transfer will take place. We cooperate only with trusted partners. We provide information and contacts: drivers, dispatchers and those responsible for your transfer. A decent driver, a well-groomed car, a luggage delivery, a meeting with a sign, compliance with traffic rules, an English-speaking driver.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid discount">
+        <div class="row justify-content-center">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front">
+                        <div>Need a discount?</div>
+                    </div>
+                    <div class="back">
+                        <div>Enter a code Rg8\D@otS14</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="aboutus">
+        <div class="destination" id="aboutus"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center">About us</h2></div>
+            </div>
+            <div class="row justify-content-center text-justify">
+                <div class="col-sm-11">
+                    <p>Company <strong>«Business Travel Agency»</strong> organizes the sale of air and railway tickets for international and domestic flights, hotel reservation and transfer organization. For Corporate clients it offers organization of conferences and seminars, events and corporate events.</p>
+                    <p><strong>Mission:</strong> To improve the quality of business tourism services in Ukraine for both companies and the end user by providing quality services at a price below the market price.</p>
+                    <p><strong>Goal:</strong> Become the best operator in Ukraine to provide a range of business tourism services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="destination" id="testimonials"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8 col-center m-auto">
+                    <h2 class="text-center">Reviews</h2>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item carousel-item active">
+                                <div class="img-box"><img src="../img/client1.jpg" alt=""></div>
+                                <p class="testimonial">I bought an air ticket from Kiev to Moscow and back. I liked the service, courteous manager, excellent price.</p>
+                                <p class="overview"><b>Dmitriy</b>, Self employed</p>
+                            </div>
+                            <div class="item carousel-item">
+                                <div class="img-box"><img src="../img/client2.jpg" alt=""></div>
+                                <p class="testimonial">Excellent service for buying tickets for a train and plane. I recommend.</p>
+                                <p class="overview"><b>Irina</b>, Sports club Gladiator Gym administrator</p>
+                            </div>
+                            <div class="item carousel-item">
+                                <div class="img-box"><img src="../img/client3.jpg" alt=""></div>
+                                <p class="testimonial">I used the services of this company, I ordered a ticket to Kiev - Emirates, the price is good, attentive manager.</p>
+                                <p class="overview"><b>Roman</b>, Lawyer</p>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                        <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="partners">
+        <div class="destination" id="partners"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <!--<h2 class="text-center">Наши партнеры</h2></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-3 col-6 partners_item">
+                    <a href="#"><img class="mx-auto d-block" src="../img/logotype.png" height="60" alt="BTA logo"></a>
+                </div>
+                <div class="col-sm-3 col-6 partners_item">
+                    <a href="#"><img class="mx-auto d-block" src="../img/logotype.png" height="60" alt="BTA logo"></a>
+                </div>
+                <div class="col-sm-3 col-6 partners_item">
+                    <a href="#"><img class="mx-auto d-block" src="../img/logotype.png" height="60" alt="BTA logo"></a>
+                </div>
+                <div class="col-sm-3 col-6 partners_item">
+                    <a href="#"><img class="mx-auto d-block" src="../img/logotype.png" height="60" alt="BTA logo"></a>
+                </div>-->
+                </div>
+            </div>
+    </section>
+    <section class="contacts">
+        <div class="destination" id="contacts"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <h2>Write to us</h2>
+                    <p>Here you can leave your questions, wishes and thanks.</p>
+                    <form id="formblabla" action="/en/send_blabla.php" method="post" class="needs-validation" novalidate>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-sm-8">
+                                <!-- <label for="usernameblabla">Ваше имя</label> -->
+                                <input type="text" class="form-control" id="usernameblabla" name="usernameblabla" placeholder="Name" pattern="^[a-zA-Zа-яґєіїёА-ЯЄІЇЁ\s()-]{3,35}" required>
+                                <div class="invalid-feedback">
+                                    Enter your name. Digits are forbidden.
+                                </div>
+                                <!-- Украинские,русские,английские большие и маленькие буквы, символ пробела, скобки, дефис, всего от 3-х до 35 символов. Апостроф и цифры запрещены. -->
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <!-- <label for="usertelephone">Телефон</label> -->
+                                <input type="tel" class="form-control" id="usertelblabla" name="usertelblabla" placeholder="Phone" pattern="^[0-9-+()\s]{10,20}" required>
+                                <div class="invalid-feedback">
+                                    Phone from 10 to 20 digits. Letters are forbidden.
+                                </div>
+                                <!-- цифры,символ пюс, дефис,скобки, пробел, всего от 10-х до 20 символов. Буквы и другие символы запрещены. 
+                                        Пример граничной валидности:+ (380) 63-767-88-99 (всего 20 символов) -->
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <input type="email" class="form-control" id="useremailblabla" name="useremailblabla" placeholder="E-mail" required>
+                                <div class="invalid-feedback">
+                                    Please, enter a valid e-mail.
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <div class="form-row justify-content-center">
+                                    <textarea class="form-control" name="textblabla" id="textblabla" rows="7" maxlength="1000" placeholder="Your message" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Enter your message.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-lg bta_button button_blabla">Send</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-center">Contacts</h2>
+                    <div class="row">
+                        <div class="col-sm-11 contact_block">
+                            <p><i class="fas fa-phone"></i> Phone: <a href="tel:044-228-8186">(044)228-81-86</a></p>
+                            <p><i class="fas fa-envelope"></i> E-mail: info@bta.biz.ua</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Address: Kiev, Knyazhy zaton Str., 9а</p>
+                        </div>
+                        <div class="col-sm-11 social_block">
+                            <a href="https://www.facebook.com/groups/1965556380121019/" target="_b">
+                                    <i class="fab fa-facebook-square fa-lg"></i></a>
+                            <a href="https://twitter.com/BTA_biz_ua" target="_b">
+                                    <i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="https://vk.com" target="_b">
+                                    <i class="fab fa-vk fa-lg"></i></a>
+                            <a href="https://www.instagram.com/businesstravelagency_ua/" target="_b">
+                                    <i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="https://www.linkedin.com/company/business-travel-agency-ua/" target="_b">
+                                    <i class="fab fa-linkedin fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <div class="row map_block justify-content-center">
+                        <iframe width="96%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.0909340441754!2d30.62285431572956!3d50.402142879468705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c53960b12e39%3A0xdc159514e2d0131c!2sBTA.biz.ua!5e0!3m2!1sru!2sua!4v1530439542046"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center copyright_row">
+                <p><a class="copyright_a" href="https://z1.com.ua" target="_b">Developed by Z1.com.ua, 2018</a></p>
+            </div>
+        </div>
+    </section>
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+
+</html>

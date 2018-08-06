@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122661130-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    ga('require', 'displayfeatures');
+    gtag('config', 'UA-122661130-1');
+    </script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Заказ авиабылетов, ждбилеты, бизнес туризм">
+    <meta name="keywords" content="билет, авиабилет, ждбилет, авиаперевозки, купить билет, билет поезд, бизнес тревел, business travel, бизнес туризм, business tourism">
+    <meta name="author" content="Kordun Yuriy">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Business Travel Agency</title>
+    <!--font-awesome free CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        <div>
+            <a class="navbar-brand" href="#"><img src="../img/logotype.png" height="60" alt="BTA logo"></a>
+        </div>
+         <!-- <div class="d-none d-md-block d-lg-block"> -->  <!-- отображение только на больших и средних экранах -->
+        <div class="header_telephone">
+            <a href="tel:044-228-8186">(044)228-81-86</a>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <menu class="menu cf">
+                <li><a href="http://bta.biz.ua/en">Main</a></li>
+                <li><a href="http://bta.biz.ua/en/index.html#features">Services</a></li>
+                <li><a href="http://bta.biz.ua/en/index.html#aboutus">Company</a>
+                    <ul class="submenu">
+                        <li><a href="http://bta.biz.ua/en/index.html#aboutus">About us</a></li>
+                        <li><a href="http://bta.biz.ua/en/index.html#testimonials">Reviews</a></li>
+                        <!-- <li><a href="index.html#partners">Partners</a></li> -->
+                        <li><a href="../doc/bta_dogovor.pdf" target="_b">Contract</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contacts">Contacts</a></li>
+            </menu>
+        </div>
+        <div class="language_box">
+            <a class="btn language_button" href="../index.html">RU</a>
+            <a class="btn language_button active" href="#">EN</a>
+        </div>
+        <div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <section id="undermenuplace">
+    </section>
+    <section id="success">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <h3 class="text-center">Your application has been successfully submitted. In the near future our manager will contact you.</h3>
+                </div>
+                <div class="col-md-6">
+                    <a href="index.html" class="btn btn-secondary btn-lg btn-block bta_button" role="button" aria-disabled="true">Back to the main page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts">
+        <div class="destination" id="contacts"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <h2>Write to us</h2>
+                    <p>Here you can leave your questions, wishes and thanks.</p>
+                    <form id="formblabla" action="/en/send_blabla.php" method="post" class="needs-validation" novalidate>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-sm-8">
+                                <!-- <label for="usernameblabla">Ваше имя</label> -->
+                                <input type="text" class="form-control" id="usernameblabla" name="usernameblabla" placeholder="Name" pattern="^[a-zA-Zа-яґєіїёА-ЯЄІЇЁ\s()-]{3,35}" required>
+                                <div class="invalid-feedback">
+                                    Enter your name. Digits are forbidden.
+                                </div>
+                                <!-- Украинские,русские,английские большие и маленькие буквы, символ пробела, скобки, дефис, всего от 3-х до 35 символов. Апостроф и цифры запрещены. -->
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <!-- <label for="usertelephone">Телефон</label> -->
+                                <input type="tel" class="form-control" id="usertelblabla" name="usertelblabla" placeholder="Phone" pattern="^[0-9-+()\s]{10,20}" required>
+                                <div class="invalid-feedback">
+                                    Phone from 10 to 20 digits. Letters are forbidden.
+                                </div>
+                                <!-- цифры,символ пюс, дефис,скобки, пробел, всего от 10-х до 20 символов. Буквы и другие символы запрещены. 
+                                        Пример граничной валидности:+ (380) 63-767-88-99 (всего 20 символов) -->
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <input type="email" class="form-control" id="useremailblabla" name="useremailblabla" placeholder="E-mail" required>
+                                <div class="invalid-feedback">
+                                    Please, enter a valid e-mail.
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <div class="form-row justify-content-center">
+                                    <textarea class="form-control" name="textblabla" id="textblabla" rows="7" maxlength="1000" placeholder="Your message" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Enter your message.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-lg bta_button button_blabla">Send</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-center">Contacts</h2>
+                    <div class="row">
+                        <div class="col-sm-11 contact_block">
+                            <p><i class="fas fa-phone"></i> Phone: <a href="tel:044-228-8186">(044)228-81-86</a></p>
+                            <p><i class="fas fa-envelope"></i> E-mail: info@bta.biz.ua</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Address: Kiev, Knyazhy zaton Str., 9а</p>
+                        </div>
+                        <div class="col-sm-11 social_block">
+                            <a href="https://www.facebook.com/groups/1965556380121019/" target="_b">
+                                    <i class="fab fa-facebook-square fa-lg"></i></a>
+                            <a href="https://twitter.com/BTA_biz_ua" target="_b">
+                                    <i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="https://vk.com" target="_b">
+                                    <i class="fab fa-vk fa-lg"></i></a>
+                            <a href="https://www.instagram.com/businesstravelagency_ua/" target="_b">
+                                    <i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="https://www.linkedin.com/company/business-travel-agency-ua/" target="_b">
+                                    <i class="fab fa-linkedin fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <div class="row map_block justify-content-center">
+                        <iframe width="96%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.0909340441754!2d30.62285431572956!3d50.402142879468705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c53960b12e39%3A0xdc159514e2d0131c!2sBTA.biz.ua!5e0!3m2!1sru!2sua!4v1530439542046"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center copyright_row">
+                <p><a class="copyright_a" href="https://z1.com.ua" target="_b">Developed by Z1.com.ua, 2018</a></p>
+            </div>
+        </div>
+    </section>
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+
+</html>
