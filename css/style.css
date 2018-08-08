@@ -308,7 +308,7 @@ input[type="date"] {
 
 .train_button.active,
 .avia_button.active {
-    box-shadow: 0 0 0 0.3rem rgba(255, 2, 222, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(255, 2, 222, 0.25);
     color: black;
 }
 
@@ -375,7 +375,7 @@ input[type="date"] {
 }
 
 .language_button.active {
-    box-shadow: 0 0 0 0.3rem rgba(255, 2, 222, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(255, 2, 222, 0.25);
     color: black;
 }
 
@@ -546,6 +546,9 @@ input[type="date"] {
 
 
 /* Start flipper */
+.features{
+    padding-bottom: 20px;
+}
 
 .flip-container {
     perspective: 750px;
@@ -611,12 +614,27 @@ input[type="date"] {
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    background: rgba(117, 23, 197, 0.8);
+    
+
 }
 
 .front {
-    background: linear-gradient(135deg, rgba(255, 2, 222, 0.6), rgba(117, 23, 197, 0.2));
+    
 }
+
+.back div{
+        box-shadow: 0 0 0 0.25rem rgba(117, 23, 197, 0.4);
+        border-radius: 5px;
+}
+
+.front div{
+        box-shadow: 0 0 0 0.25rem rgba(255, 2, 222, 0.4);
+        border-radius: 5px;
+        padding-bottom: 16px;
+}
+
+
+
 
 .flip-container:hover .flipper,
 .flip-container.hover .flipper {
