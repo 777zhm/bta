@@ -544,45 +544,85 @@ input[type="date"] {
 
 /* END Anchor destination */
 
-
 /* Start flipper */
 .features{
-    padding-bottom: 20px;
+
+
 }
 
 .flip-container {
     perspective: 750px;
-    min-height: 200px;
-    margin-bottom: 8px; 
+    min-height: 250px;
 }
 
-@media only screen and (min-width: 740px) {
+.back p {
+    margin-bottom: 0;
+}
+.back ul{
+    margin-bottom: 0;
+    list-style: circle;
+}
 
+
+@media only screen and (min-width:320px) {
 .flip_block1 {
-    height: 290px;
-      
-}
-
-.flip_block4 {
-    height: 250px;
-}
-}
-
-@media only screen and (max-width: 400px) {
-.flip_block1 {
-    height: 320px;
+    min-height: 370px;
 }
 .flip_block2 {
-    height: 220px;
+    min-height: 440px;
 }
 .flip_block3 {
-    height: 220px;
+    min-height: 320px;
 }
 .flip_block4 {
-    height: 300px;
+    min-height: 350px;
 }
 }
 
+@media only screen and (min-width:481px) {
+.flip_block1 {
+    min-height: 250px;
+}
+.flip_block2 {
+    min-height: 280px;
+}
+.flip_block3 {
+    min-height: 250px;
+}
+.flip_block4 {
+    min-height: 220px;
+}
+}
+
+@media (min-width:641px){
+.flip_block1 {
+    min-height: 250px;
+}
+.flip_block2 {
+    min-height: 370px;
+}
+.flip_block3 {
+    min-height: 250px;
+}
+.flip_block4 {
+    min-height: 280px;
+}
+}
+
+@media (min-width:1025px) {
+.flip_block1 {
+    min-height: 260px;
+}
+.flip_block2 {
+    min-height: 260px;
+}
+.flip_block3 {
+    min-height: 260px;
+}
+.flip_block4 {
+    min-height: 260px;
+}
+}
 
 
 .flipper {
@@ -605,38 +645,28 @@ input[type="date"] {
     font-family: 'Exo 2', sans-serif;
     color: rgb(60, 60, 60);
     font-size: 16px;
-    padding: 8px 8px 0px 8px;
 }
 
 .back {
-
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    
-
-}
-
-.front {
-    
 }
 
 .back div{
-        box-shadow: 0 0 0 0.25rem rgba(117, 23, 197, 0.4);
+        box-shadow: 0 0 0 3px rgba(117, 23, 197, 0.4);
         border-radius: 5px;
+        padding-left: 4px;
 }
 
 .front div{
-        box-shadow: 0 0 0 0.25rem rgba(255, 2, 222, 0.4);
+        box-shadow: 0 0 0 3px rgba(255, 2, 222, 0.4);
         border-radius: 5px;
         padding-bottom: 16px;
 }
 
 
-
-
-.flip-container:hover .flipper,
 .flip-container.hover .flipper {
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
